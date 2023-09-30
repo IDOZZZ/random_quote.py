@@ -1,0 +1,277 @@
+/* Reset CSS */
+/* Reset gaya default untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container */
+/* Gaya untuk kontainer utama */
+
+/* .container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(214, 214, 214); /* Warna latar belakang */
+    /* padding: 10px;
+    overflow: hidden; */
+/* } */
+.aot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #0c192c;/* Warna latar belakang */
+    padding: 10px;
+    overflow: hidden;
+}
+.bubbles {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;/* Mengatur bubbles ke lapisan belakang */
+}
+
+.bubbles span{
+    background: rgba(79, 195, 220, 0.7);
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i)) ;
+}
+.bubbles span:nth-child(even)
+{
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px  #ff2d75,
+    0 0 100px  #ff2d75;
+  
+}
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0) translateX(calc(10% * var(--i)));
+    }
+    100% {
+        transform: translateY(-10vh) scale(1) translateX(calc(10% * var(--i)));
+    }
+}
+
+
+/* Todo App */
+/* Gaya untuk aplikasi to-do */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff; /* Warna latar belakang */
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* Header Styles */
+/* Gaya untuk header dalam aplikasi */
+.todo-app h3 {
+    margin-bottom: 10px;
+}
+
+.todo-app h2 {
+    color: #002765; /* Warna teks */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Neon Text */
+/* Gaya untuk efek teks neon */
+.neon-text {
+    display: flex;
+    align-items: center;
+    text-align: center; /* Pusatkan teks */
+    font-size: 36px; /* Ukuran font */
+    color: #fff; /* Warna teks (putih) */
+    text-transform: uppercase; /* Ubah ke huruf kapital */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    font-family: 'Arial', sans-serif; /* Jenis font yang digunakan */
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.5); /* Efek bayangan teks neon dengan jarak yang lebih kecil */
+    animation: neon-blink 1.5s ease-in-out infinite alternate; /* Animasi berkedip */
+}
+
+/* Neon Text Icon */
+/* Gaya untuk ikon teks neon */
+.neon-text img {
+    width: 30px;
+    margin-left: 10px; /* Berikan margin kiri agar ada jarak antara teks dan ikon */
+}
+
+/* Neon Text Blinking Animation */
+/* Animasi berkedip untuk teks neon */
+@keyframes neon-blink {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+/* Styling for the scrollbar in the list */
+/* Gaya untuk scrollbar dalam daftar */
+#nameList {
+    overflow-y: auto;
+    max-height: 300px;
+    scrollbar-color: #002765 #fff; /* Warna thumb dan track scrollbar */
+}
+
+#nameList::-webkit-scrollbar {
+    width: 5px; /* Lebar scrollbar */
+}
+
+#nameList::-webkit-scrollbar-thumb {
+    background-color: #002765; /* Warna thumb scrollbar */
+    border-radius: 6px; /* Sudut bulat thumb scrollbar */
+}
+
+#nameList::-webkit-scrollbar-thumb:hover {
+    background-color: #00194a; /* Warna thumb scrollbar saat hover */
+}
+
+/* Row Styles */
+/* Gaya untuk baris */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0; /* Warna latar belakang */
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Input Styles */
+/* Gaya untuk bidang input */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 9px;
+    font-weight: 9px;
+    border-bottom: 1px solid #002765; /* Garis bawah input */
+    margin-right: 9px;
+}
+
+/* Button Styles */
+/* Gaya untuk tombol */
+button {
+    border: none;
+    outline: none;
+    padding: 12px 30px; /* Sesuaikan padding tombol */
+    background: #002765; /* Warna latar belakang tombol */
+    font-size: 16px;
+    color: #edeef0; /* Warna teks */
+    cursor: pointer;
+    border-radius: 40px; /* Radius sudut tombol */
+    transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
+}
+
+button:hover {
+    transform: scale(1.05); /* Mengubah skala tombol saat hover */
+}
+
+/* List Item Styles */
+/* Gaya untuk elemen daftar */
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%); /* Posisi tengah vertikal */
+    left: 8px;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edeef0; /* Warna latar belakang */
+    border-radius: 10px; /* Radius border yang lebih kecil untuk tampilan yang lebih padat */
+    margin-top: px;
+    padding: 10px 16px; /* Padding atas dan bawah yang lebih kecil */
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Margin bawah yang lebih kecil antara setiap elemen */
+}
+
+.name-container span {
+    flex: 1;
+    font-size: 16px; /* Ukuran font */
+}
+
+/* CSS Method - Right to Left */
+/* Gaya untuk animasi teks yang bergerak ke kiri */
+.scroll-left {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background: #002765; /* Warna latar belakang */
+    color: rgb(255, 255, 255); /* Warna teks */
+    border: 1px solid rgb(255, 255, 255); /* Garis tepi */
+}
+
+.scroll-left p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    transform: translateX(100%); /* Mulai dari posisi kanan */
+    animation: scroll-left 20s linear infinite; /* Animasi bergerak ke kiri secara linear dan berulang */
+}
+
+/* Scroll Left Animation */
+/* Animasi bergerak ke kiri */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
